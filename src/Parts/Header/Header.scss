@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+@media screen and (max-width: 377px) {
+    header {
+        position: relative;
+        width: 100%;
+        height: 62px;
+        background-color: #FFFBEB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px -13px 30px -6px rgba(0,0,0,0.81);
+        -webkit-box-shadow: 2px -13px 30px -6px rgba(0,0,0,0.81);
+        -moz-box-shadow: 2px -13px 30px -6px rgba(0,0,0,0.81);
+
+        h2 {
+            font-family: 'Rye', cursive;
+            font-size: 1.5rem;
+            color: #b45309;
+        }
+
+        a {
+            .arrow-back {
+                position: absolute;
+                left: 7vw;
+                width: 16px;
+                top: 3.5vh;
+            }
+        }
+    }
+}

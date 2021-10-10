@@ -1,0 +1,25 @@
+@media screen and (max-width: 377px) {
+    .container {
+        display: block;
+        padding: 0 !important;
+        
+        span {
+            font-family: 'Open Sans', sans-serif;
+            color: #B45309;
+            margin: 0px auto;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 32px;
+        }
+
+        .icon-wrapper {
+            margin-bottom: 16px;
+            justify-content: center;
+            margin-top: 32px;
+    
+            .cn-icon {
+                width: 60px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@media screen and (max-width: 377px) {
+    section {
+        font-family: 'Open Sans', sans-serif;
+        margin: 24px 16px;
+
+        .input-wrapper {
+            display: flex;
+
+            &.category {
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 16px;
+            }
+        }
+        
+        .icon-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 32px;
+
+            .cn-icon {
+                width: 60px;
+            }
+        }
+
+        .random-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 34px;
+        }
+
+        .list-of-category {
+            position: absolute;
+            background-color: white;
+            width: 236px;
+            bottom: 65px;
+            left: 16px;
+            box-shadow: -3px 3px 20px -8px rgba(0,0,0,0.75);
+            -webkit-box-shadow: -3px 3px 20px -8px rgba(0,0,0,0.75);
+            -moz-box-shadow: -3px 3px 20px -8px rgba(0,0,0,0.75);
+            padding-left: 17px;
+            
+            ul {
+                font-weight: 700;
+                margin: 5px 0;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@media screen and (max-width: 377px) {
+  header {
+    width: 100%;
+    height: 62px;
+    background-color: #FFFBEB;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    box-shadow: 2px -13px 30px -6px rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 2px -13px 30px -6px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: 2px -13px 30px -6px rgba(0, 0, 0, 0.81);
+  }
+  header h2 {
+    font-family: 'Rye', cursive;
+    font-size: 1.5rem;
+    color: #b45309;
+  }
+}
+/*# sourceMappingURL=Header.css.map */
