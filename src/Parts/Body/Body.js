@@ -94,7 +94,12 @@ export default function Body () {
       </div>
       <Result text={randomJoke} className={['random-result']} />
       <div className="random-button">
-        <Button onClick={getRandomJoke} text="Another!" width="103px" />
+        <Button
+          isGetRandomJoke
+          onClick={getRandomJoke}
+          text="Another!"
+          width="103px"
+        />
       </div>
       <div className="list-of-category">
         {SuggestionCategory && showSuggestionCategory}
