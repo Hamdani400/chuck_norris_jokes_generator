@@ -37,6 +37,11 @@ export default function ResultPage (props) {
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  
+  useEffect (() => {
+    document.title = `Result | ${props.location.state.isSearchCategory ? props.location.state.category : props.location.state.search}`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const getRandomJokebyCategory = () => {
     axios.get (urlCategory).then (res => {
