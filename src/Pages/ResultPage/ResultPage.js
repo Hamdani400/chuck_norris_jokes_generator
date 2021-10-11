@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 import Header from '../../Parts/Header/Header.js';
 import Result from '../../Component/Results/Result.js';
+import Button from '../../Component/Button/ButtonAction.js';
 import {ReactComponent as ChuckNorrisIcon} from 'assets/chucknorris.svg';
 import './ResultPage.scss';
 
@@ -10,9 +11,9 @@ const axios = require ('axios');
 export default function ResultPage (props) {
   const [text, setText] = useState ([]);
 
+  const urlSearch = `https://api.chucknorris.io/jokes/search?query=${props.location.state.search}`;
+  const urlCategory = `https://api.chucknorris.io/jokes/random?category=${props.location.state.category}`;
   useEffect (() => {
-    const urlSearch = `https://api.chucknorris.io/jokes/search?query=${props.location.state.search}`;
-    const urlCategory = `https://api.chucknorris.io/jokes/random?category=${props.location.state.category}`;
     axios
       .get (
         `${props.location.state.isSearchCategory ? urlCategory : urlSearch}`
@@ -37,6 +38,14 @@ export default function ResultPage (props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const getRandomJokebyCategory = () => {
+    axios.get (urlCategory).then (res => {
+      const datas = [];
+      datas.push (res.data.value);
+      setText (datas);
+    });
+  };
+
   return (
     <div className="container">
       <Header isResultPage />
@@ -49,6 +58,15 @@ export default function ResultPage (props) {
       </div>
       <div className="d-flex justify-content-center">
         <Result text={text} className={['results']} />
+      </div>
+      <div className="random-tbn d-flex justify-content-center">
+        {props.location.state.isSearchCategory &&
+          <Button
+            isGetRandomJoke
+            onClick={getRandomJokebyCategory}
+            text="Another!"
+            width="103px"
+          />}
       </div>
     </div>
   );
